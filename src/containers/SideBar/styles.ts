@@ -1,9 +1,14 @@
 import styled from 'styled-components'
+import variables from '../../styles/variables'
 
 export const Aside = styled.aside`
   padding: 16px;
-  background-color: #eee;
   height: 100vh;
+  background-color: ${variables.spaceIndigo};
+
+  div {
+    background-color: ${variables.spaceIndigo};
+  }
 `
 
 export const Filters = styled.div`

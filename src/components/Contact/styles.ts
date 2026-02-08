@@ -8,15 +8,15 @@ type TagProps = {
 }
 
 function setBackgroundColor(props: TagProps): string {
-  if (props.category === enums.Category.FAMILY) return variables.yellow
-  if (props.category === enums.Category.FRIENDS) return variables.green
-  if (props.category === enums.Category.WORK) return variables.red
+  if (props.category === enums.Category.FAMILY) return variables.olive
+  if (props.category === enums.Category.FRIENDS) return variables.dodgerBlue
+  if (props.category === enums.Category.WORK) return variables.dustyMauve
 
   return variables.darkBlue
 }
 
 export const Card = styled.div`
-  background-color: #fcfcfc;
+  background-color: ${variables.blueSlate};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 16px;
   margin-bottom: 32px;
@@ -25,13 +25,19 @@ export const Card = styled.div`
   label {
     display: flex;
     align-items: center;
+    background-color: ${variables.blueSlate};
   }
 `
 
 export const Title = styled.h3`
+  background-color: ${variables.blueSlate};
   font-size: 18px;
   font-weigth: bold;
   margin-left: 8px;
+
+  em {
+    background-color: ${variables.blueSlate};
+  }
 `
 
 export const Tag = styled.span<TagProps>`
@@ -49,9 +55,10 @@ export const Tag = styled.span<TagProps>`
 export const Content = styled.div`
   margin-bottom: 16px;
   margin-top: 16px;
+  background-color: ${variables.blueSlate};
 
   input {
-    color: #8b8b8b;
+    color: #fcfcfc;
     font-size: 14px;
     line-height: 24px;
     font-family: 'Roboto Mono', monospace;
@@ -64,10 +71,15 @@ export const Content = styled.div`
 `
 
 export const ActionBar = styled.div`
+  background-color: ${variables.blueSlate};
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 16px;
 `
 
+export const SaveButton = styled(Button)`
+  background-color: ${variables.dodgerBlue};
+`
+
 export const CancelRemoveButton = styled(Button)`
-  background-color: ${variables.red};
+  background-color: ${variables.dustyMauve};
 `

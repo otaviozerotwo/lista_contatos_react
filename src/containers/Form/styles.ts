@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { Button } from '../../styles'
+import variables from '../../styles/variables'
 
 export const FormStyle = styled.form`
   max-width: 547px;
@@ -24,4 +26,10 @@ export const Option = styled.div`
   display: inline;
   text-transform: capitalize;
   margin-right: 16px;
+`
+
+export const SaveButton = styled(Button)`
+  background-color: ${variables.dodgerBlue};
+  width: 100%;
+  font-size: 16px;
 `

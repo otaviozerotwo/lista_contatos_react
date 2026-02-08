@@ -7,6 +7,8 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
+    background-color: ${variables.dustyGrape};
+    color: #fff;
     list-style: none;
   }
 `
@@ -51,10 +53,6 @@ export const Button = styled.button`
   background-color: ${variables.darkBlue};
   border-radius: 8px;
   margin-right: 8px;
-`
-
-export const SaveButton = styled(Button)`
-  background-color: ${variables.green};
 `
 
 export default GlobalStyle

@@ -3,8 +3,8 @@ import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { add } from '../../store/reducers/contact'
 import * as enums from '../../utils/enums/Contact'
-import { Input, MainContainer, SaveButton, Title } from '../../styles'
-import { FormStyle, Option, Options } from './styles'
+import { Input, MainContainer, Title } from '../../styles'
+import { FormStyle, Option, Options, SaveButton } from './styles'
 
 const Form = () => {
   const dispatch = useDispatch()

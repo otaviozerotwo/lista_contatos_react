@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import variables from '../../styles/variables'
 
 type Props = {
   active: boolean
@@ -7,18 +8,21 @@ type Props = {
 export const Card = styled.div<Props>`
   padding: 8px;
   border: 1px solid ${(props) => (props.active ? '#1e90ff' : '#a1a1a1')};
-  background-color: ${(props) => (props.active ? '#fff' : '#fcfcfc')};
+  background-color: ${(props) =>
+    props.active ? variables.dustyGrape : variables.spaceIndigo};
   color: ${(props) => (props.active ? '#1e90ff' : '#5e5e5e')};
   border-radius: 8px;
   cursor: pointer;
 `
 
 export const Counter = styled.span`
-  font-weigth: bold;
-  font-size: 24px;
   display: block;
+  background-color: ${variables.spaceIndigo};
+  font-weight: bold;
+  font-size: 24px;
 `
 
 export const Label = styled.span`
+  background-color: ${variables.spaceIndigo};
   font-size: 14px;
 `

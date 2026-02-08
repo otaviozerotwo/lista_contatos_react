@@ -5,8 +5,8 @@ import variables from '../../styles/variables'
 export const ButtonAddStyle = styled(Link)`
   height: 64px;
   width: 64px;
-  background-color: ${variables.green};
-  color: #fff;
+  background-color: ${variables.almondSilk};
+  color: ${variables.spaceIndigo};
   position: fixed;
   bottom: 40px;
   right: 40px;

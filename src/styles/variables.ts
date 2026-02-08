@@ -1,7 +1,12 @@
 export default {
-  red: '#c23616',
-  green: '#44bd32',
-  yellow: '#f0c11a',
-  orange: '#e1a32a',
-  darkBlue: '#2f3640'
+  darkBlue: '#2f3640',
+
+  spaceIndigo: '#22223B',
+  dustyGrape: '#4A4E69',
+  blueSlate: '#5E5E75',
+  lilacAsh: '#9A8C98',
+  almondSilk: '#DAC7C3',
+  dodgerBlue: '#1e90ff',
+  dustyMauve: '#994D51',
+  olive: '#837a24'
 }

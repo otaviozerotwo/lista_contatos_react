@@ -2,7 +2,7 @@ import { ChangeEvent, useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import ContactClass from '../../models/Contact'
 import * as S from './styles'
-import { Button, SaveButton } from '../../styles'
+import { Button } from '../../styles'
 import { addAsFavorite, edit, remove } from '../../store/reducers/contact'
 import CustomCheckbox from '../CustomCheckbox'
 
@@ -78,14 +78,14 @@ const Contact = ({
       <S.ActionBar>
         {isEditing ? (
           <>
-            <SaveButton
+            <S.SaveButton
               onClick={() => {
                 dispatch(edit({ id, name, phone, email, category, favorite }))
                 setIsEditing(false)
               }}
             >
               Salvar
-            </SaveButton>
+            </S.SaveButton>
             <S.CancelRemoveButton onClick={editCancel}>
               Cancelar
             </S.CancelRemoveButton>
