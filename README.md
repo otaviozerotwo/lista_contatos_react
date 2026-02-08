@@ -1,46 +1,126 @@
-# Getting Started with Create React App
+# Entrega: Exercício módulo 32
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Neste exercício você deve:
+1) Criar uma lista de contatos utilizando o React.
+2) Usar o Redux para gestão dos dados.
+3) Utilizar o Styled Components para estilização.
+4) Os contatos deverão conter as informações:
+nome completo;
+e-mail;
+telefone;
+5) Incluir as funcionalidades:
+adição;
+remoção;
+edição dos itens da lista de contatos.
+6) Criar um novo repositório no Github para armazenar o projeto.
+7) Subir o conteúdo neste repositório e enviar o link.
 
-## Available Scripts
+# Configurações
 
-In the project directory, you can run:
+### Criar projeto
+```
+npx create-react-app lista_contatos_react --template typescript
+```
 
-### `npm start`
+### EditorConfig
+criar arquivo .editorconfig com o conteúdo:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+root = true
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+```
 
-### `npm test`
+### Eslint
+instalação:
+```
+npm init @eslint/config@0.4.6
+npm install @typescript-eslint/eslint-plugin@^5.50.0 @typescript-eslint/parser@^5.50.0 eslint@^8.33.0 eslint-config-prettier@^8.6.0 eslint-plugin-prettier@^4.2.1 eslint-plugin-react@^7.32.2 eslint-plugin-react-hooks@^4.6.0 prettier@2.8.3
+npm install --save-dev eslint-plugin-react-hooks
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Adicionar ao arquivo .eslintrc.json:
 
-### `npm run build`
+```
+"plugins": [
+    "react",
+    "@typescript-eslint",
+    "react-hooks"
+  ],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+comando para executar o eslint:
+```
+npx eslint --fix .
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prettier
+instalação:
+```
+npm install --save-dev eslint-plugin-prettier eslint-config-prettir
+npm install --save-dev --save-exact prettier
+npm install --save-dev eslint-plugin-prettier@latest
+```
+criar arquivo .prettierrc com o conteúdo:
+```
+{
+  "trailingComma": "none",
+  "semi": false,
+  "singleQuote": true
+}
+```
+adicionar ao arquivo .eslintrc.json:
+```
+"extends": [
+  "eslint:recommended",
+  "plugin:@typescript-eslint/recommended",
+  "plugin:react/recommended",
+  "plugin:prettier/recommended"
+],
+```
+criar arquivo .vscode/settings.json com o conteúdo:
+```
+{
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  }
+}
+```
+comando para executar o prettier em todos os arquivos do projeto:
+```
+npx prettier --write .\src\
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Styled Components
+```
+npm install --save styled-components
+npm install --save-dev @types/styled-components
+```
 
-### `npm run eject`
+### Redux Toolkit
+```
+npm install --save react-redux @reduxjs/toolkit
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### React Router
+```
+npm install --save react-router-dom
+```
