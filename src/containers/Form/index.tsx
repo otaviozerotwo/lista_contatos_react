@@ -39,18 +39,21 @@ const Form = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Nome"
+          required
         />
         <Input
           type="tel"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
           placeholder="Telefone"
+          required
         />
         <Input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="E-mail"
+          required
         />
         <Options>
           <p>Categoria</p>

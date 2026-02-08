@@ -5,7 +5,6 @@ import * as S from './styles'
 import { Button, SaveButton } from '../../styles'
 import { addAsFavorite, edit, remove } from '../../store/reducers/contact'
 import CustomCheckbox from '../CustomCheckbox'
-import { MdFavorite, MdFavoriteBorder } from 'react-icons/md'
 
 type Props = ContactClass
 
@@ -49,12 +48,7 @@ const Contact = ({
   return (
     <S.Card>
       <label htmlFor={name}>
-        <CustomCheckbox
-          checked={favorite}
-          onChange={handleFavorite}
-          CheckedIcon={MdFavorite}
-          UncheckedIcon={MdFavoriteBorder}
-        />
+        <CustomCheckbox checked={favorite} onChange={handleFavorite} />
         <S.Title>
           {isEditing && <em>Editando: </em>}
           {originalName}

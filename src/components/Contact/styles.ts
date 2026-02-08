@@ -41,6 +41,7 @@ export const Tag = styled.span<TagProps>`
   color: #fff;
   background-color: ${(props) => setBackgroundColor(props)};
   border-radius: 8px;
+  margin-top: 8px;
   margin-right: 16px;
   display: inline-block;
 `
